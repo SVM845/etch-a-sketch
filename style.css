@@ -1,23 +1,39 @@
 #main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
 }
 #gridContainer {
-    width: 800px;
-    height: 800px;
-    display: flex;
-    flex-wrap: wrap;
-    border: 10px solid red;
-    justify-content: center;
-    align-items: center;
+  width: 800px;
+  height: 800px;
+  display: flex;
+  flex-wrap: wrap;
+  border: 10px solid red;
+  justify-content: center;
+  align-items: center;
 }
 .squares {
-    width: 6.25%;
-    aspect-ratio: 1;
-    border: 0px solid blue;
+  width: 6.25%;
+  aspect-ratio: 1;
+  border: 0px solid blue;
 }
 .squares:hover {
-    background-color: black;
+  background-color: black;
+}
+.buttons {
+    width: 800px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+
 }
 
+.buttons button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: burlywood;
+  border-style: hidden;
+}
