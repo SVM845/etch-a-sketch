@@ -5,4 +5,4 @@
 ![Etch A Sketch board game](./images/readmePic1.png)  
 
 
-            We're Going To Make Our Childhood Toy Into a Playable Website!
+            We're Going To Turn Our Childhood Toy Into a Playable Website!

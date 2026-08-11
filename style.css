@@ -1,0 +1,15 @@
+#gridContainer {
+    width: 1080px;
+    height: 1080px;
+    border: 10px solid red;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.squares {
+    width: 67.5px;
+    height: 67.5px;
+    border: 5px solid blue;
+}
