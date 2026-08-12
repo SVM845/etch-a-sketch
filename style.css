@@ -1,3 +1,9 @@
+body {
+  background-image: url(/images/background3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 #main {
   display: flex;
   justify-content: center;
@@ -10,9 +16,14 @@
   height: 800px;
   display: flex;
   flex-wrap: wrap;
-  border: 10px solid red;
+  border: 10px solid rgb(10, 76, 255);
   justify-content: center;
   align-items: center;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
 }
 .squares {
   aspect-ratio: 1;
@@ -21,17 +32,39 @@
   background-color: black;
 }
 .buttons {
-    width: 800px;
-    display: flex;
-    justify-content: flex-end;
-    gap: 5px;
-
+  width: 800px;
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
 }
 
-.buttons button {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  background-color: burlywood;
-  border-style: hidden;
+button {
+  padding: 10px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.12);
+  color: #e8eef2;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  font-size: 15px;
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  background: rgba(245, 197, 66, 0.85);
+  color: #071a2f;
+  border-color: rgba(245, 197, 66, 0.9);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+#colorPicker {
+    display: none;
 }
