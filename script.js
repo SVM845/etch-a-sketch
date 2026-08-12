@@ -3,6 +3,11 @@ const sizeButton = document.querySelector('#sizeButton');
 const resetButton = document.querySelector('#resetButton');
 let sqrSize = 0;
 let calcWidth = 0;
+let drawing = false;
+
+document.addEventListener("mouseup", () => {
+    drawing = false;
+});
 
 sizeButton.addEventListener("click", (e) => {
     gridContainer.innerHTML = "";
@@ -29,9 +34,18 @@ function resetGrid(number) {
         square.classList.add("squares");
         square.style.width = calcWidth;
         gridContainer.appendChild(square);
+
+        square.addEventListener("mousedown", () => {
+            drawing = true;
+        });
+        square.addEventListener("mousedown", () => {
+            drawing = true;
+        });
         square.addEventListener("mouseenter", (e) => {
-            e.currentTarget.style.backgroundColor = "red";
-        })
+            if (drawing) {
+                e.currentTarget.style.backgroundColor = "red";
+            }
+        });
     }
 }
 function makeGrid(number) {
@@ -40,8 +54,15 @@ function makeGrid(number) {
         square.classList.add("squares");
         square.style.width = calcWidth;
         gridContainer.appendChild(square);
+        square.addEventListener("mousedown", () => {
+            drawing = true;
+        });
         square.addEventListener("mouseenter", (e) => {
-            e.currentTarget.style.backgroundColor = "red";
-        })
+            if (drawing) {
+                e.currentTarget.style.backgroundColor = "red";
+            }
+        });
     }
 }
+
+
