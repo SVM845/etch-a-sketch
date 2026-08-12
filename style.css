@@ -15,9 +15,7 @@
   align-items: center;
 }
 .squares {
-  width: 6.25%;
   aspect-ratio: 1;
-  border: 0px solid blue;
 }
 .squares:hover {
   background-color: black;
