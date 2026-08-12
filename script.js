@@ -17,8 +17,23 @@ sizeButton.addEventListener("click", (e) => {
         makeGrid(sqrSize);
     }
 })
+resetButton.addEventListener("click", (e) => {
+    resetGrid(sqrSize);
+})
 
 
+function resetGrid(number) {
+    gridContainer.innerHTML = "";
+    for (let i = 1; i <= number; i++) {
+        const square = document.createElement('div');
+        square.classList.add("squares");
+        square.style.width = calcWidth;
+        gridContainer.appendChild(square);
+        square.addEventListener("mouseenter", (e) => {
+            e.currentTarget.style.backgroundColor = "red";
+        })
+    }
+}
 function makeGrid(number) {
     for (let i = 1; i <= number; i++) {
         const square = document.createElement('div');
@@ -28,6 +43,5 @@ function makeGrid(number) {
         square.addEventListener("mouseenter", (e) => {
             e.currentTarget.style.backgroundColor = "red";
         })
-
     }
 }
