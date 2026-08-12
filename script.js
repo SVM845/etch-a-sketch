@@ -16,20 +16,18 @@ sizeButton.addEventListener("click", (e) => {
         sqrSize = size * size;
         makeGrid(sqrSize);
     }
-
-    function makeGrid(number) {
-        for (let i = 1; i <= number; i++) {
-            const square = document.createElement('div');
-            square.classList.add("squares");
-            square.style.width = calcWidth;
-            gridContainer.appendChild(square);
-            // square.addEventListener("mouseenter", (e) => {
-            //     e.currentTarget.style = `
-            // background-color: red`
-            // })
-        }
-
-    }
-
 })
 
+
+function makeGrid(number) {
+    for (let i = 1; i <= number; i++) {
+        const square = document.createElement('div');
+        square.classList.add("squares");
+        square.style.width = calcWidth;
+        gridContainer.appendChild(square);
+        square.addEventListener("mouseenter", (e) => {
+            e.currentTarget.style.backgroundColor = "red";
+        })
+
+    }
+}
