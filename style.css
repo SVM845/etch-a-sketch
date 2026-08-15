@@ -3,6 +3,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  margin-bottom: 0px;
 }
 #main {
   display: flex;
@@ -69,3 +70,43 @@ button:active {
     display: none;
 }
 
+footer {
+  padding: 10px 20px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+
+  background: rgba(255, 255, 255, 0.12);
+  color: #e8eef2;
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  font-size: 20px;
+  font-family: monospace;
+  font-weight: bold;
+  cursor: pointer;
+  
+
+  transition: all 0.2s ease;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer:hover {
+  background: rgba(15, 69, 218, 0.85);
+  color: #071a2f;
+  border-color: rgba(245, 197, 66, 0.9);
+  transform: translateY(-2px);
+}
+
+footer:active {
+  transform: translateY(0);
+}
+
+#footerDiv {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
